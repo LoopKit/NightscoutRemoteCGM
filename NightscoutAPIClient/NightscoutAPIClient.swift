@@ -40,16 +40,22 @@ final class NightscoutAPIClient {
 
 extension GlucoseEntry: GlucoseValue {
     public var startDate: Date { date }
-    public var quantity: HKQuantity { .init(unit: .milligramsPerDeciliter, doubleValue: sgv) }
+    public var quantity: HKQuantity { .init(unit: .milligramsPerDeciliter, doubleValue: glucose) }
 }
 
 extension GlucoseEntry: GlucoseDisplayable {
-    
-    public var isStateValid: Bool { sgv >= 39}
-    public var trendType: GlucoseTrend? {
-        guard let trend = trend else { return nil }
-        return GlucoseTrend(rawValue: trend)
+
+    public var isStateValid: Bool {
+        glucoseType == .meter || glucose >= 39
     }
+    public var trendType: LoopKit.GlucoseTrend? {
+        if let trend = trend {
+            return LoopKit.GlucoseTrend(rawValue: trend.rawValue)
+        } else {
+            return nil
+        }
+    }
+
     public var isLocal: Bool { false }
     
     // TODO Placeholder. This functionality will come with LOOP-1311

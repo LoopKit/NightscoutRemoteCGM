@@ -135,14 +135,23 @@ public class NightscoutAPIManager: CGMManager {
 
                     var filteredGlucose = glucoseEntries
                     if self.useFilter {
-                        var filter = KalmanFilter(stateEstimatePrior: Double(glucoseEntries.last!.sgv), errorCovariancePrior: Config.filterNoise)
+                        var filter = KalmanFilter(stateEstimatePrior: glucoseEntries.last!.glucose, errorCovariancePrior: Config.filterNoise)
                         filteredGlucose.removeAll()
-                        for var item in glucoseEntries.reversed() {
+                        for item in glucoseEntries.reversed() {
                             let prediction = filter.predict(stateTransitionModel: 1, controlInputModel: 0, controlVector: 0, covarianceOfProcessNoise: Config.filterNoise)
-                            let update = prediction.update(measurement: Double(item.sgv), observationModel: 1, covarienceOfObservationNoise: Config.filterNoise)
+                            let update = prediction.update(measurement: item.glucose, observationModel: 1, covarienceOfObservationNoise: Config.filterNoise)
                             filter = update
-                            item.sgv = filter.stateEstimatePrior.rounded()
-                            filteredGlucose.append(item)
+                            filteredGlucose.append(
+                                GlucoseEntry(
+                                    glucose: filter.stateEstimatePrior.rounded(),
+                                    date: item.date,
+                                    device: item.device,
+                                    glucoseType: item.glucoseType,
+                                    trend: item.trend,
+                                    changeRate: item.changeRate,
+                                    id: item.id
+                                )
+                            )
                         }
                         filteredGlucose = filteredGlucose.reversed()
                     }
@@ -152,8 +161,13 @@ public class NightscoutAPIManager: CGMManager {
                     }
                     let newGlucose = filteredGlucose.filterDateRange(startDate, nil)
                     let newSamples = newGlucose.filter({ $0.isStateValid }).map { glucose -> NewGlucoseSample in
-                        let glucoseTrend = glucose.trend != nil ? GlucoseTrend(rawValue: glucose.trend!) : nil
-                        return NewGlucoseSample(date: glucose.startDate, quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.sgv), condition: nil, trend: glucoseTrend, trendRate: nil, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int(glucose.startDate.timeIntervalSince1970))", device: self.device)
+                        let glucoseTrend: LoopKit.GlucoseTrend?
+                        if let trend = glucose.trend {
+                            glucoseTrend = LoopKit.GlucoseTrend(rawValue: trend.rawValue)
+                        } else {
+                            glucoseTrend = nil
+                        }
+                        return NewGlucoseSample(date: glucose.startDate, quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose), condition: nil, trend: glucoseTrend, trendRate: nil, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int(glucose.startDate.timeIntervalSince1970))", device: self.device)
                     }
 
                     if let latestBackfill = newGlucose.max(by: {$0.startDate > $1.startDate}) {
