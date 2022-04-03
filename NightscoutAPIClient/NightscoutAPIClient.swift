@@ -64,12 +64,20 @@ extension GlucoseEntry: GlucoseDisplayable {
     }
     
     public var trendRate: HKQuantity? {
-        return nil
+        if let changeRate = changeRate {
+            return HKQuantity(unit: .milligramsPerDeciliterPerMinute, doubleValue: changeRate)
+        } else {
+            return nil
+        }
     }
 }
 
 extension HKUnit {
     static let milligramsPerDeciliter: HKUnit = {
         HKUnit.gramUnit(with: .milli).unitDivided(by: .literUnit(with: .deci))
+    }()
+
+    public static let milligramsPerDeciliterPerMinute: HKUnit = {
+        return HKUnit.milligramsPerDeciliter.unitDivided(by: .minute())
     }()
 }

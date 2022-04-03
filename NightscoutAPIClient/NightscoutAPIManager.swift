@@ -29,7 +29,7 @@ public class NightscoutAPIManager: CGMManager {
     
     public var cgmManagerStatus: CGMManagerStatus {
         //TODO: Probably need a better way to calculate this.
-        if let latestGlucose = latestBackfill, latestGlucose.startDate.timeIntervalSinceNow > -TimeInterval(minutes: 4.5) {
+        if let latestGlucose = latestBackfill, latestGlucose.date.timeIntervalSinceNow > -TimeInterval(minutes: 4.5) {
             return .init(hasValidSensorSession: true, device: device)
         } else {
             return .init(hasValidSensorSession: false, device: device)
@@ -167,7 +167,16 @@ public class NightscoutAPIManager: CGMManager {
                         } else {
                             glucoseTrend = nil
                         }
-                        return NewGlucoseSample(date: glucose.startDate, quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose), condition: nil, trend: glucoseTrend, trendRate: nil, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int(glucose.startDate.timeIntervalSince1970))", device: self.device)
+                        return NewGlucoseSample(
+                            date: glucose.startDate,
+                            quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
+                            condition: nil,
+                            trend: glucoseTrend,
+                            trendRate: glucose.trendRate,
+                            isDisplayOnly: glucose.isCalibration == true,
+                            wasUserEntered: glucose.glucoseType == .meter,
+                            syncIdentifier: glucose.id ?? "\(Int(glucose.startDate.timeIntervalSince1970))",
+                            device: self.device)
                     }
 
                     if let latestBackfill = newGlucose.max(by: {$0.startDate > $1.startDate}) {
