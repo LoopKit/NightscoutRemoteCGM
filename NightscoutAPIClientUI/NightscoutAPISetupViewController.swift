@@ -19,7 +19,7 @@ final class NightscoutAPISetupViewController: UINavigationController, Completion
     weak var cgmManagerOnboardingDelegate: CGMManagerOnboardingDelegate?
     weak var completionDelegate: CompletionDelegate?
 
-    let cgmManager = NightscoutAPIManager()
+    let cgmManager = NightscoutRemoteCGM()
     private var lifetime: AnyCancellable?
     let disclaimerViewModel: DisclaimerViewModel
     
@@ -89,10 +89,10 @@ final class NightscoutAPISetupViewController: UINavigationController, Completion
 
 final class NightscoutAPIDisclaimerViewController: UIHostingController<DisclaimerView> {
     
-    let cgmManager: NightscoutAPIManager
+    let cgmManager: NightscoutRemoteCGM
     private var viewModel: DisclaimerViewModel
     
-    public init(cgmManager: NightscoutAPIManager, disclaimerViewModel: DisclaimerViewModel) {
+    public init(cgmManager: NightscoutRemoteCGM, disclaimerViewModel: DisclaimerViewModel) {
         self.cgmManager = cgmManager
         self.viewModel = disclaimerViewModel
         let view = DisclaimerView(viewModel: self.viewModel)

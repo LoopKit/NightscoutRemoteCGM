@@ -11,7 +11,7 @@ import LoopKit
 import HealthKit
 import NightscoutAPIClient
 
-extension NightscoutAPIManager: CGMManagerUI {
+extension NightscoutRemoteCGM: CGMManagerUI {
     
     // TODO Placeholder.
     public static var onboardingImage: UIImage? {

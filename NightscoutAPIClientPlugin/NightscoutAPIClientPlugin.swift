@@ -15,7 +15,7 @@ class NightscoutAPIClientPlugin: NSObject, CGMManagerUIPlugin {
     private let log = OSLog(category: "NightscoutAPIClientPlugin")
     
     public var cgmManagerType: CGMManagerUI.Type? {
-        NightscoutAPIManager.self
+        NightscoutRemoteCGM.self
     }
 
     override init() {

@@ -17,7 +17,7 @@ public final class NightscoutAPISettingsViewController: UIHostingController<Sett
     
     public var completionDelegate: CompletionDelegate?
 
-    public let cgmManager: NightscoutAPIManager
+    public let cgmManager: NightscoutRemoteCGM
 
     public let glucoseUnit: DisplayGlucoseUnitObservable
 
@@ -25,7 +25,7 @@ public final class NightscoutAPISettingsViewController: UIHostingController<Sett
 
     private var lifetime: AnyCancellable?
 
-    public init(cgmManager: NightscoutAPIManager, glucoseUnit: DisplayGlucoseUnitObservable) {
+    public init(cgmManager: NightscoutRemoteCGM, glucoseUnit: DisplayGlucoseUnitObservable) {
         self.cgmManager = cgmManager
         self.glucoseUnit = glucoseUnit
         self.viewModel = SettingsViewModel(nightscoutService: cgmManager.nightscoutService)

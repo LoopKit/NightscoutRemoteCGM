@@ -11,29 +11,24 @@ import HealthKit
 import Combine
 import NightscoutUploadKit
 
-public class NightscoutAPIManager: CGMManager {
+public class NightscoutRemoteCGM: CGMManager {
     
     public static let managerIdentifier = "NightscoutAPIClient"
     
     public var managerIdentifier: String {
-        return NightscoutAPIManager.managerIdentifier
+        return NightscoutRemoteCGM.managerIdentifier
     }
 
     public static let localizedTitle = LocalizedString("Nightscout Remote CGM", comment: "Title for the CGMManager option")
     
     public var localizedTitle: String {
-        return NightscoutAPIManager.localizedTitle
+        return NightscoutRemoteCGM.localizedTitle
     }
     
     public var glucoseDisplay: GlucoseDisplayable? { latestBackfill }
     
     public var cgmManagerStatus: CGMManagerStatus {
-        //TODO: Probably need a better way to calculate this.
-        if let latestGlucose = latestBackfill, latestGlucose.date.timeIntervalSinceNow > -TimeInterval(minutes: 4.5) {
-            return .init(hasValidSensorSession: true, device: device)
-        } else {
-            return .init(hasValidSensorSession: false, device: device)
-        }
+        return .init(hasValidSensorSession: isOnboarded, device: device)
     }
     
     public var isOnboarded: Bool {
@@ -45,7 +40,7 @@ public class NightscoutAPIManager: CGMManager {
     }
 
     private enum Config {
-        static let useFilterKey = "NightscoutAPIClient.useFilter"
+        static let useFilterKey = "NightscoutRemoteCGM.useFilter"
         static let filterNoise = 2.5
     }
 
@@ -98,7 +93,7 @@ public class NightscoutAPIManager: CGMManager {
 
     private var requestReceiver: Cancellable?
 
-    private let processQueue = DispatchQueue(label: "NightscoutAPIManager.processQueue")
+    private let processQueue = DispatchQueue(label: "NightscoutRemoteCGM.processQueue")
 
     private var isFetching = false
 
@@ -206,7 +201,7 @@ public class NightscoutAPIManager: CGMManager {
     public var device: HKDevice? = nil
 
     public var debugDescription: String {
-        "## NightscoutAPIManager\nlatestBackfill: \(String(describing: latestBackfill))\n"
+        "## NightscoutRemoteCGM\nlatestBackfill: \(String(describing: latestBackfill))\n"
     }
 
     public var appURL: URL? {
@@ -239,14 +234,14 @@ public class NightscoutAPIManager: CGMManager {
 }
 
 // MARK: - AlertResponder implementation
-extension NightscoutAPIManager {
+extension NightscoutRemoteCGM {
     public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier, completion: @escaping (Error?) -> Void) {
         completion(nil)
     }
 }
 
 // MARK: - AlertSoundVendor implementation
-extension NightscoutAPIManager {
+extension NightscoutRemoteCGM {
     public func getSoundBaseURL() -> URL? { return nil }
     public func getSounds() -> [Alert.Sound] { return [] }
 }
