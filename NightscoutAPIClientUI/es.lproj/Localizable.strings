@@ -1,0 +1,45 @@
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "";
+
+/* (No Comment) */
+"Close" = "";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "";
+
+/* (No Comment) */
+"Delete CGM" = "";
+
+/* No comment provided by engineer. */
+"Done" = "";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "";
+
+/* (No Comment) */
+"Select Upload option if you are using a source other than a remote service." = "";
+
+/* (No Comment) */
+"Service Description" = "";
+
+/* No comment provided by engineer. */
+"Status" = "";
+
+/* (No Comment) */
+"Upload to remote service" = "";
+
+/* No comment provided by engineer. */
+"URL" = "";
+
+/* (No Comment) */
+"Use glucose filter" = "";
+
+/* (No Comment) */
+"Use Kalman filter to smooth out a sensor noise." = "";
+

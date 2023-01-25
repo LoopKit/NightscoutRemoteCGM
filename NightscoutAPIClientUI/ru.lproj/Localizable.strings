@@ -1,9 +1,18 @@
-"Upload to remote service" = "Загружать в удаленный сервис";
-"Select Upload option if you want the application to upload BG to Nightscout." = "Выберите опцию Загружать, если вы хотите, чтобы приложение загружало глюкозу в Nightscout";
+/* (No Comment) */
+"Close" = "Закрыть";
 
+/* (No Comment) */
+"Delete CGM" = "Удалить мониторинг";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "Nightscout Remote CGM";
+
+/* (No Comment) */
+"Upload to remote service" = "Загружать в удаленный сервис";
+
+/* (No Comment) */
 "Use glucose filter" = "Использовать фильтр глюкозы";
+
+/* (No Comment) */
 "Use Kalman filter to smooth out a sensor noise." = "Использовать фильтр Калмана, чтобы сгладить шумы сенсора.";
 
-"Delete CGM" = "Удалить мониторинг";
-"Nightscout Remote CGM" = "Nightscout Remote CGM";
-"Close" = "Закрыть";

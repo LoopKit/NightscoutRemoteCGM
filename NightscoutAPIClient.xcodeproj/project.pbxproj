@@ -138,6 +138,7 @@
 		A9BAC74326CDBBB4001C9493 /* NightscoutAPIClientPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutAPIClientPlugin.swift; sourceTree = "<group>"; };
 		A9BAC74526CDC3AA001C9493 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		A9BAC74726CDC3B3001C9493 /* OSLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		C1821691297E55A7001EB097 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +408,7 @@
 				en,
 				Base,
 				ru,
+				es,
 			);
 			mainGroup = 38F6138F234F3066003FB95D;
 			packageReferences = (
@@ -530,6 +532,7 @@
 			children = (
 				3897846224290961008AD57A /* en */,
 				3897846424290997008AD57A /* ru */,
+				C1821691297E55A7001EB097 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
