@@ -1,0 +1,15 @@
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Voulez-vous vraiment supprimer ce MGC?";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "Paramètres MGC";
+
+/* (No Comment) */
+"Delete CGM" = "Effacer le MGC";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "MGC Nightscout à distance";
+
+/* (No Comment) */
+"Service Description" = "La source MGC Nightscout à distance va utiliser vos données MGC de Nightscout et les rendre disponible dans Loop. Ceci est utile si vous ne pouvez pas ajouter votre appareil MGC dans Loop mais que vos données MGC sont disponibles dans Nightscout.\n\nIl n'est pas recommandé d'utiliser cette méthode dans un but thérapeutique dû au risque de perte de connexion au réseau et le manque de support d'applicaiton en arrière plan.";
+

@@ -1,0 +1,45 @@
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Sei sicuro di voler eliminare questo CGM?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "Cancellare";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "Impostazioni CGM";
+
+/* (No Comment) */
+"Close" = "Chiudere";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Continua";
+
+/* (No Comment) */
+"Delete CGM" = "Elimina CGM";
+
+/* No comment provided by engineer. */
+"Done" = "Eseguito";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "GCM Remoto di Nightscout ";
+
+/* (No Comment) */
+"Select Upload option if you are using a source other than a remote service." = "Selezionare l' opzione di caricamento dati usando una fonte diversa di quella del  servizio remoto";
+
+/* (No Comment) */
+"Service Description" = "La fonte dati CGM remota di Nightscout che incamera i tuoi dati CGM di Nightscout li mettera' disponibili a Loop se richiesti. . Cio' è utile se a Loop non e' possibile a ricevere dati CGM  direttamente dal tuo dispositivo e quindi  come ripiego a Loop arriveranno i tuoi dati CGM lo stesso se disponibili su Nightscout. \nComunque  questo ripiego non è consigliabile utilizzarlo per la terapia in quanto presenta il rischio di interruzioni di rete con o la mancanza del  supporto di sottofondo dell'App.";
+
+/* No comment provided by engineer. */
+"Status" = "Stato attuale";
+
+/* (No Comment) */
+"Upload to remote service" = "Caricare sul servizio remoto";
+
+/* No comment provided by engineer. */
+"URL" = "URL";
+
+/* (No Comment) */
+"Use glucose filter" = "Attivazione  filtro del Glucosio";
+
+/* (No Comment) */
+"Use Kalman filter to smooth out a sensor noise." = "Attivare filtro Kalman per smussare il disturbo del sensore.";
+
