@@ -1,3 +1,6 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "API Secret";
+
 /* No comment provided by engineer. */
 "Are you sure you want to delete this CGM?" = "Weet je zeker dat je de CGM wilt verwijderen?";
 
@@ -11,7 +14,7 @@
 "Close" = "Sluiten";
 
 /* Button text to Continue in Nightscout Disclaimer view */
-"Continue" = "Ga verder";
+"Continue" = "Ga Verder";
 
 /* (No Comment) */
 "Delete CGM" = "Verwijder CGM";
@@ -26,7 +29,7 @@
 "Select Upload option if you are using a source other than a remote service." = "Selecteer de optie Uploaden als je een andere bron dan een remote service gebruikt.";
 
 /* (No Comment) */
-"Service Description" = "De Nightscout Remote CGM-bron gebruikt je CGM-gegevens uit Nightscout en maakt ze beschikbaar in Loop. Dit is handig als je je CGM niet kunt toevoegen aan Loop, maar je CGM-gegevens wel beschikbaar zijn in Nightscout.\n\nHet wordt niet aanbevolen deze optie voor therapie doeleinden te gebruiken vanwege het risico op netwerkstoringen en het ontbreken van ondersteuning van de app in de achtergrond.";
+"Service Description" = "De Nightscout Remote CGM-bron gebruikt je CGM-gegevens uit Nightscout en maakt ze beschikbaar in Loop. Dit is handig als je je CGM niet kunt toevoegen aan Loop, maar je CGM-gegevens wel beschikbaar zijn in Nightscout.\n\nHet wordt niet aanbevolen deze optie voor therapiedoeleinden te gebruiken vanwege het risico op netwerkstoringen en het ontbreken van ondersteuning van de app in de achtergrond.";
 
 /* No comment provided by engineer. */
 "Status" = "Status";
@@ -34,7 +37,7 @@
 /* (No Comment) */
 "Upload to remote service" = "Uploaden naar een remote service";
 
-/* No comment provided by engineer. */
+/* The title of the Nightscout API server URL credential */
 "URL" = "URL";
 
 /* (No Comment) */

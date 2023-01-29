@@ -39,6 +39,7 @@
 		A9BAC74626CDC3AA001C9493 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74526CDC3AA001C9493 /* Bundle.swift */; };
 		A9BAC74926CDC3CD001C9493 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74726CDC3B3001C9493 /* OSLog.swift */; };
 		A9BAC74A26CDC565001C9493 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74726CDC3B3001C9493 /* OSLog.swift */; };
+		C155A8F92986396E009BD257 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C155A8F72986396E009BD257 /* Localizable.strings */; };
 		C19C8BF52865216A0056D5E4 /* NightscoutAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F61399234F3066003FB95D /* NightscoutAPIClient.framework */; platformFilter = ios; };
 		C19C8BF62865216A0056D5E4 /* NightscoutAPIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F61399234F3066003FB95D /* NightscoutAPIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C19C8BF92865216A0056D5E4 /* NightscoutAPIClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E30FB52358C25000DAB3A0 /* NightscoutAPIClientUI.framework */; platformFilter = ios; };
@@ -140,9 +141,20 @@
 		A9BAC74726CDC3B3001C9493 /* OSLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		C11613502983096D00777E7C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C11A2BD229830A3100AC5135 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C13408ED298639C900FC2059 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C155A8F82986396E009BD257 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C155A8FA2986396E009BD257 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C16EF1FC298639B800A944BB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C16EF1FD298639B800A944BB /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C1782C9A298639B100D43E74 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C17BC37A29863998003F2BC5 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C17D557E298639A800364431 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1821691297E55A7001EB097 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C18886EB29830A5E004C982D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C19E3880298638CE00851444 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C1BCB5BF298309C4001C50FF /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C1F28BD0298639D800B53AB1 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C1F28BD1298639D800B53AB1 /* sk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sk; path = sk.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +248,7 @@
 				38D9A6482413C0870099AAF0 /* KalmanFilter */,
 				38F6139C234F3066003FB95D /* NightscoutAPIClient.h */,
 				38F6139D234F3066003FB95D /* Info.plist */,
+				C155A8F72986396E009BD257 /* Localizable.strings */,
 				38F613B8234F33B1003FB95D /* NightscoutRemoteCGM.swift */,
 				38F613BF234F401F003FB95D /* NightscoutAPIService.swift */,
 				38F613C1234F7FB9003FB95D /* NightscoutAPIClient.swift */,
@@ -417,6 +430,11 @@
 				it,
 				fr,
 				nl,
+				tr,
+				de,
+				pl,
+				ro,
+				sk,
 			);
 			mainGroup = 38F6138F234F3066003FB95D;
 			packageReferences = (
@@ -446,6 +464,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C155A8F92986396E009BD257 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +564,24 @@
 				C1BCB5BF298309C4001C50FF /* it */,
 				C11A2BD229830A3100AC5135 /* fr */,
 				C18886EB29830A5E004C982D /* nl */,
+				C19E3880298638CE00851444 /* tr */,
+				C155A8FA2986396E009BD257 /* de */,
+				C16EF1FD298639B800A944BB /* pl */,
+				C13408ED298639C900FC2059 /* ro */,
+				C1F28BD1298639D800B53AB1 /* sk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C155A8F72986396E009BD257 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C155A8F82986396E009BD257 /* de */,
+				C17BC37A29863998003F2BC5 /* it */,
+				C17D557E298639A800364431 /* nb */,
+				C1782C9A298639B100D43E74 /* nl */,
+				C16EF1FC298639B800A944BB /* pl */,
+				C1F28BD0298639D800B53AB1 /* sk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

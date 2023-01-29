@@ -1,8 +1,11 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "Chiave personale API";
+
 /* No comment provided by engineer. */
 "Are you sure you want to delete this CGM?" = "Sei sicuro di voler eliminare questo CGM?";
 
 /* Button text to Cancel in Nightscout Disclaimer view */
-"Cancel" = "Cancellare";
+"Cancel" = "Annulla";
 
 /* No comment provided by engineer. */
 "CGM Settings" = "Impostazioni CGM";
@@ -14,10 +17,10 @@
 "Continue" = "Continua";
 
 /* (No Comment) */
-"Delete CGM" = "Elimina CGM";
+"Delete CGM" = "Cancella CGM";
 
 /* No comment provided by engineer. */
-"Done" = "Eseguito";
+"Done" = "Fine";
 
 /* Title for the CGMManager option */
 "Nightscout Remote CGM" = "GCM Remoto di Nightscout ";
@@ -29,12 +32,12 @@
 "Service Description" = "La fonte dati CGM remota di Nightscout che incamera i tuoi dati CGM di Nightscout li mettera' disponibili a Loop se richiesti. . Cio' è utile se a Loop non e' possibile a ricevere dati CGM  direttamente dal tuo dispositivo e quindi  come ripiego a Loop arriveranno i tuoi dati CGM lo stesso se disponibili su Nightscout. \nComunque  questo ripiego non è consigliabile utilizzarlo per la terapia in quanto presenta il rischio di interruzioni di rete con o la mancanza del  supporto di sottofondo dell'App.";
 
 /* No comment provided by engineer. */
-"Status" = "Stato attuale";
+"Status" = "Stato";
 
 /* (No Comment) */
 "Upload to remote service" = "Caricare sul servizio remoto";
 
-/* No comment provided by engineer. */
+/* The title of the Nightscout API server URL credential */
 "URL" = "URL";
 
 /* (No Comment) */
