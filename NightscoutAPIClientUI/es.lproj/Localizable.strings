@@ -1,45 +1,48 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "Clave secreta API";
+
 /* No comment provided by engineer. */
-"Are you sure you want to delete this CGM?" = "";
+"Are you sure you want to delete this CGM?" = "¿Está seguro de que quiere eliminar este MCG?";
 
 /* Button text to Cancel in Nightscout Disclaimer view */
-"Cancel" = "";
+"Cancel" = "Cancelar";
 
 /* No comment provided by engineer. */
-"CGM Settings" = "";
+"CGM Settings" = "Configuración del MCG";
 
 /* (No Comment) */
-"Close" = "";
+"Close" = "Cerrar";
 
 /* Button text to Continue in Nightscout Disclaimer view */
-"Continue" = "";
+"Continue" = "Continuar";
 
 /* (No Comment) */
-"Delete CGM" = "";
+"Delete CGM" = "Eliminar MCG";
 
 /* No comment provided by engineer. */
-"Done" = "";
+"Done" = "Completado";
 
 /* Title for the CGMManager option */
-"Nightscout Remote CGM" = "";
+"Nightscout Remote CGM" = "MCG Nightscout Remoto";
 
 /* (No Comment) */
-"Select Upload option if you are using a source other than a remote service." = "";
+"Select Upload option if you are using a source other than a remote service." = "Seleccione la opción Subir si utiliza una fuente que no sea un servicio remoto.";
 
 /* (No Comment) */
-"Service Description" = "";
+"Service Description" = "La fuente de Nightscout Remote MCG utilizará sus datos y los pondrá disponibles en Loop. Esto es útil si no puedes añadir tu dispositivo de MCG a Loop pero tus datos CGM están disponibles en Nightscout.\n\nNo se recomienda su uso para terapia debido al riesgo de cortes de red y a la falta de soporte para la aplicación.";
 
 /* No comment provided by engineer. */
-"Status" = "";
+"Status" = "Estado";
 
 /* (No Comment) */
-"Upload to remote service" = "";
+"Upload to remote service" = "Subir al servicio remoto";
 
-/* No comment provided by engineer. */
-"URL" = "";
-
-/* (No Comment) */
-"Use glucose filter" = "";
+/* The title of the Nightscout API server URL credential */
+"URL" = "URL";
 
 /* (No Comment) */
-"Use Kalman filter to smooth out a sensor noise." = "";
+"Use glucose filter" = "Utilizar filtro de glucosa";
+
+/* (No Comment) */
+"Use Kalman filter to smooth out a sensor noise." = "Utiliza el filtro Kalman para suavizar el ruido de un sensor.";
 

@@ -26,6 +26,9 @@
 "Nightscout Remote CGM" = "Nightscout Remote-CGM";
 
 /* (No Comment) */
+"Select Upload option if you are using a source other than a remote service." = "Wählen Sie die Option Hochladen, wenn Sie eine andere Quelle als einen Remotedienst verwenden.";
+
+/* (No Comment) */
 "Service Description" = "Die Nightscout Remote CGM-Quelle verwendet Ihre CGM-Daten von Nightscout und macht sie in Loop verfügbar. Dies ist nützlich, wenn Sie Ihr CGM-Gerät nicht zu Loop hinzufügen können, Ihre CGM-Daten aber auf Nightscout verfügbar sind.\n\nAufgrund des Risikos von Netzwerkausfällen und der fehlenden Hintergrundunterstützung der App wird die Verwendung dieser Quelle für die Therapie nicht empfohlen.";
 
 /* No comment provided by engineer. */

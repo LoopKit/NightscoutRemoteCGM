@@ -1,0 +1,48 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "API kodeord";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Er du sikker på at du vil slette denne CGM?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "Afbryd";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "CGM-indstillinger";
+
+/* (No Comment) */
+"Close" = "Luk";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Fortsæt";
+
+/* (No Comment) */
+"Delete CGM" = "Slet CGM";
+
+/* No comment provided by engineer. */
+"Done" = "Udført";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "Nightscout Remote CGM";
+
+/* (No Comment) */
+"Select Upload option if you are using a source other than a remote service." = "Vælg Upload, hvis du bruger en anden kilde end en fjerntjeneste.";
+
+/* (No Comment) */
+"Service Description" = "Nightscout Remote CGM-kilden vil bruge dine CGM-data fra Nightscout og gøre dem tilgængelige i Loop. Dette er nyttigt, hvis du ikke kan tilføje din CGM-enhed til Loop, men dine CGM-data er tilgængelige på Nightscout.\n\nDet anbefales ikke at bruge dette til behandling på grund af risikoen for netværksafbrydelser og den manglende app-understøttelse.";
+
+/* No comment provided by engineer. */
+"Status" = "Status";
+
+/* (No Comment) */
+"Upload to remote service" = "Upload til fjerntjeneste";
+
+/* The title of the Nightscout API server URL credential */
+"URL" = "URL";
+
+/* (No Comment) */
+"Use glucose filter" = "Brug glukosefilter";
+
+/* (No Comment) */
+"Use Kalman filter to smooth out a sensor noise." = "Brug Kalman-filter til at udjævne sensorstøj.";
+

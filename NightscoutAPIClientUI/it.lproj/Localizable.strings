@@ -11,19 +11,19 @@
 "CGM Settings" = "Impostazioni CGM";
 
 /* (No Comment) */
-"Close" = "Chiudere";
+"Close" = "Chiudi";
 
 /* Button text to Continue in Nightscout Disclaimer view */
 "Continue" = "Continua";
 
 /* (No Comment) */
-"Delete CGM" = "Cancella CGM";
+"Delete CGM" = "Elimina CGM";
 
 /* No comment provided by engineer. */
 "Done" = "Fine";
 
 /* Title for the CGMManager option */
-"Nightscout Remote CGM" = "GCM Remoto di Nightscout ";
+"Nightscout Remote CGM" = "CGM Remoto Nightscout";
 
 /* (No Comment) */
 "Select Upload option if you are using a source other than a remote service." = "Selezionare l' opzione di caricamento dati usando una fonte diversa di quella del  servizio remoto";

@@ -2,5 +2,47 @@
 "API Secret" = "API Secret";
 
 /* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Bu CGM'i silmek istediğinizden emin misiniz?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "İptal";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "CGM Ayarları";
+
+/* (No Comment) */
+"Close" = "Kapat";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Devam et";
+
+/* (No Comment) */
+"Delete CGM" = "CGM Sil";
+
+/* No comment provided by engineer. */
+"Done" = "Tamamlandı";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "Nightscout Uzak CGM";
+
+/* (No Comment) */
+"Select Upload option if you are using a source other than a remote service." = "Uzak hizmet dışında bir kaynak kullanıyorsanız Karşıya Yükle seçeneğini seçin.";
+
+/* (No Comment) */
+"Service Description" = "Nightscout Uzak CGM kaynağı, Nightscout'taki CGM verilerinizi kullanacak ve Loop'ta kullanılabilir hale getirecektir. Bu, CGM cihazınızı Loop'a ekleyemiyorsanız ve CGM verileriniz Nightscout'ta mevcutsa kullanışlıdır.\n\nAğ kesintisi riski ve uygulama arka plan desteğinin olmaması nedeniyle bunun tedavi için kullanılması önerilmez.";
+
+/* No comment provided by engineer. */
 "Status" = "Durum";
+
+/* (No Comment) */
+"Upload to remote service" = "Uzak hizmete yükleme";
+
+/* The title of the Nightscout API server URL credential */
+"URL" = "URL";
+
+/* (No Comment) */
+"Use glucose filter" = "KŞ filtresi kullan";
+
+/* (No Comment) */
+"Use Kalman filter to smooth out a sensor noise." = "Bir sensör gürültüsünü yumuşatmak için Kalman filtresini kullanın.";
 
