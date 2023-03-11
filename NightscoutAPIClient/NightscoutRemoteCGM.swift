@@ -9,7 +9,7 @@
 import LoopKit
 import HealthKit
 import Combine
-import NightscoutUploadKit
+import NightscoutKit
 
 public class NightscoutRemoteCGM: CGMManager {
     

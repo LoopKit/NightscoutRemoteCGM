@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import NightscoutUploadKit
+import NightscoutKit
 import LoopKit
 import HealthKit
 
@@ -22,7 +22,7 @@ final class NightscoutAPIClient {
     
     public func fetchRecent(minutes: Int = 60, completion: @escaping (Result<[GlucoseEntry], Swift.Error>) -> Void) {
         
-        let client = NightscoutUploader(siteURL: url, APISecret: apiSecret)
+        let client = NightscoutClient(siteURL: url, apiSecret: apiSecret)
         
         let intervalLength: TimeInterval = TimeInterval(60 * minutes)
         let maxCount = (minutes / 5) * 2 // Assume 1 entry delivered every 5 minutes. Include multiplier in case multiple glucose sources.

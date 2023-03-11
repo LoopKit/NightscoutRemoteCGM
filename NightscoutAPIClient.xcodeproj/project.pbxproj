@@ -33,8 +33,6 @@
 		38FEB836236082B900F1E810 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FEB835236082B900F1E810 /* HealthKit.framework */; platformFilter = ios; };
 		A901264F26D95DFB0081BAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A901264E26D95DFB0081BAD1 /* Assets.xcassets */; };
 		A96EF0D8279F75DE00434E5D /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96EF0D7279F75DE00434E5D /* DisclaimerView.swift */; };
-		A97B829827D4C275001B3AC1 /* NightscoutUploadKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97B829727D4C275001B3AC1 /* NightscoutUploadKit.framework */; platformFilter = ios; };
-		A9BA338327E772B400AC6233 /* NightscoutUploadKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BA338227E772B400AC6233 /* NightscoutUploadKit.framework */; };
 		A9BAC74426CDBBB4001C9493 /* NightscoutAPIClientPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74326CDBBB4001C9493 /* NightscoutAPIClientPlugin.swift */; };
 		A9BAC74626CDC3AA001C9493 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74526CDC3AA001C9493 /* Bundle.swift */; };
 		A9BAC74926CDC3CD001C9493 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74726CDC3B3001C9493 /* OSLog.swift */; };
@@ -44,6 +42,7 @@
 		C19C8BF62865216A0056D5E4 /* NightscoutAPIClient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38F61399234F3066003FB95D /* NightscoutAPIClient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C19C8BF92865216A0056D5E4 /* NightscoutAPIClientUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E30FB52358C25000DAB3A0 /* NightscoutAPIClientUI.framework */; platformFilter = ios; };
 		C19C8BFA2865216A0056D5E4 /* NightscoutAPIClientUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 38E30FB52358C25000DAB3A0 /* NightscoutAPIClientUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C1CEBFF729BCC2C8007FD8A3 /* NightscoutKit in Frameworks */ = {isa = PBXBuildFile; productRef = C1CEBFF629BCC2C8007FD8A3 /* NightscoutKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,7 +174,6 @@
 			files = (
 				06E10A172360DBCC009B6FED /* LoopKit.framework in Frameworks */,
 				384D8F1123608C8100B1DD29 /* LoopKitUI.framework in Frameworks */,
-				A9BA338327E772B400AC6233 /* NightscoutUploadKit.framework in Frameworks */,
 				06E10A192360DBCE009B6FED /* NightscoutAPIClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,9 +182,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1CEBFF729BCC2C8007FD8A3 /* NightscoutKit in Frameworks */,
 				38FEB836236082B900F1E810 /* HealthKit.framework in Frameworks */,
 				38F613B7234F333C003FB95D /* LoopKit.framework in Frameworks */,
-				A97B829827D4C275001B3AC1 /* NightscoutUploadKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +374,7 @@
 			);
 			name = NightscoutAPIClient;
 			packageProductDependencies = (
+				C1CEBFF629BCC2C8007FD8A3 /* NightscoutKit */,
 			);
 			productName = NightscoutAPIClient;
 			productReference = 38F61399234F3066003FB95D /* NightscoutAPIClient.framework */;
@@ -452,6 +451,7 @@
 			);
 			mainGroup = 38F6138F234F3066003FB95D;
 			packageReferences = (
+				C1CEBFF529BCC2C8007FD8A3 /* XCRemoteSwiftPackageReference "NightscoutKit" */,
 			);
 			productRefGroup = 38F6139A234F3066003FB95D /* Products */;
 			projectDirPath = "";
@@ -971,6 +971,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C1CEBFF529BCC2C8007FD8A3 /* XCRemoteSwiftPackageReference "NightscoutKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/LoopKit/NightscoutKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C1CEBFF629BCC2C8007FD8A3 /* NightscoutKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1CEBFF529BCC2C8007FD8A3 /* XCRemoteSwiftPackageReference "NightscoutKit" */;
+			productName = NightscoutKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 38F61390234F3066003FB95D /* Project object */;
 }
