@@ -5,16 +5,16 @@
 "Are you sure you want to delete this CGM?" = "Sunteți sigur că doriți să ștergeți acest CGM?";
 
 /* Button text to Cancel in Nightscout Disclaimer view */
-"Cancel" = "Anulați";
+"Cancel" = "Renunță";
 
 /* No comment provided by engineer. */
 "CGM Settings" = "Setări CGM";
 
 /* (No Comment) */
-"Close" = "Închideți";
+"Close" = "Închide";
 
 /* Button text to Continue in Nightscout Disclaimer view */
-"Continue" = "Continuați";
+"Continue" = "Continuă";
 
 /* (No Comment) */
 "Delete CGM" = "Ștergeți CGM";

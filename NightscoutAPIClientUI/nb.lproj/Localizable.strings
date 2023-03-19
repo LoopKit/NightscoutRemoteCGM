@@ -2,7 +2,7 @@
 "API Secret" = "API Hemmelighet";
 
 /* No comment provided by engineer. */
-"Are you sure you want to delete this CGM?" = "Er du sikker på at du vil slette denne CGM?";
+"Are you sure you want to delete this CGM?" = "Er du sikker på at du vil slette CGM?";
 
 /* Button text to Cancel in Nightscout Disclaimer view */
 "Cancel" = "Avbryt";

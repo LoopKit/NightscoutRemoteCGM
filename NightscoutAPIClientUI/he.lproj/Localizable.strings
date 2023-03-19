@@ -1,17 +1,17 @@
 /* The title of the Nightscout API secret credential */
 "API Secret" = "API Secret";
 
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Are you sure you want to delete this CGM?";
+
 /* Button text to Cancel in Nightscout Disclaimer view */
-"Cancel" = "Zrušit";
+"Cancel" = "Cancel";
 
 /* Button text to Continue in Nightscout Disclaimer view */
-"Continue" = "Pokračovat";
+"Continue" = "Continue";
 
-/* No comment provided by engineer. */
-"Done" = "Hotovo";
-
-/* Title for the CGMManager option */
-"Nightscout Remote CGM" = "Nightscout Vzdálené CGM";
+/* (No Comment) */
+"Delete CGM" = "Delete CGM";
 
 /* No comment provided by engineer. */
 "Status" = "Status";

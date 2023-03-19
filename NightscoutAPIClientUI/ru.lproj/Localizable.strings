@@ -1,11 +1,11 @@
 /* The title of the Nightscout API secret credential */
-"API Secret" = "API Secret";
+"API Secret" = "API Секрет";
 
 /* No comment provided by engineer. */
 "Are you sure you want to delete this CGM?" = "Вы уверены, что хотите удалить этот CGM?";
 
 /* Button text to Cancel in Nightscout Disclaimer view */
-"Cancel" = "Отменить";
+"Cancel" = "Отмена";
 
 /* No comment provided by engineer. */
 "CGM Settings" = "Настройки CGM";
@@ -17,7 +17,7 @@
 "Continue" = "Продолжить";
 
 /* (No Comment) */
-"Delete CGM" = "Удалить мониторинг";
+"Delete CGM" = "Удалить CGM";
 
 /* No comment provided by engineer. */
 "Done" = "Готово";
