@@ -1,0 +1,9 @@
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "取消";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "继续";
+
+/* No comment provided by engineer. */
+"Status" = "状态";
+
