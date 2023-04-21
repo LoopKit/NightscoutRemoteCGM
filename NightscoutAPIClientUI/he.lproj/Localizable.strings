@@ -1,0 +1,18 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "API Secret";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Are you sure you want to delete this CGM?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "Cancel";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Continue";
+
+/* (No Comment) */
+"Delete CGM" = "Delete CGM";
+
+/* No comment provided by engineer. */
+"Status" = "Status";
+

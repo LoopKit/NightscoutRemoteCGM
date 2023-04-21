@@ -1,0 +1,30 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "API Secret";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Är du säker på att du vill radera denna CGM?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "Avbryt";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "CGM-inställningar";
+
+/* (No Comment) */
+"Close" = "Stäng";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Fortsätt";
+
+/* (No Comment) */
+"Delete CGM" = "Radera CGM";
+
+/* No comment provided by engineer. */
+"Done" = "Färdig";
+
+/* No comment provided by engineer. */
+"Status" = "Status";
+
+/* The title of the Nightscout API server URL credential */
+"URL" = "URL";
+

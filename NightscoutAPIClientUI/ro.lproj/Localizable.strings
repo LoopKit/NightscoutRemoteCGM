@@ -1,3 +1,48 @@
 /* The title of the Nightscout API secret credential */
 "API Secret" = "Secretul API";
 
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Sunteți sigur că doriți să ștergeți acest CGM?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "Renunță";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "Setări CGM";
+
+/* (No Comment) */
+"Close" = "Închide";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Continuă";
+
+/* (No Comment) */
+"Delete CGM" = "Ștergeți CGM";
+
+/* No comment provided by engineer. */
+"Done" = "Realizat";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "Nightscout CGM de la distanță";
+
+/* (No Comment) */
+"Select Upload option if you are using a source other than a remote service." = "Selectați opțiunea Upload (Încărcare) dacă utilizați o altă sursă decât un serviciu la distanță.";
+
+/* (No Comment) */
+"Service Description" = "Sursa Nightscout Remote CGM va folosi datele dvs. de CGM din Nightscout și le va face disponibile în Loop. Acest lucru este util dacă nu puteți adăuga dispozitivul dvs. CGM la Loop, dar datele dvs. CGM sunt disponibile pe Nightscout. \n\nNu este recomandat să utilizați acest lucru pentru terapie din cauza riscului de întrerupere al rețelei și a lipsei suportului de fundal al aplicației.";
+
+/* No comment provided by engineer. */
+"Status" = "Stare";
+
+/* (No Comment) */
+"Upload to remote service" = "Încărcați în serviciul de la distanță";
+
+/* The title of the Nightscout API server URL credential */
+"URL" = "URL";
+
+/* (No Comment) */
+"Use glucose filter" = "Utilizați filtrul de glucoză";
+
+/* (No Comment) */
+"Use Kalman filter to smooth out a sensor noise." = "Utilizați filtrul Kalman pentru a netezi zgomotul senzorului.";
+

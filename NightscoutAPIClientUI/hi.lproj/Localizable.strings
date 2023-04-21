@@ -1,3 +1,12 @@
 /* The title of the Nightscout API secret credential */
 "API Secret" = "एपीआई पास्वर्ड";
 
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "निरस्त";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "जारी";
+
+/* Title for the CGMManager option */
+"Nightscout Remote CGM" = "नाइटस्काउट  रिमोट कंटीन्यूअस ग्लूकोज मॉनिटरिंग";
+

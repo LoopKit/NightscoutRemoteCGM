@@ -1,0 +1,30 @@
+/* The title of the Nightscout API secret credential */
+"API Secret" = "API-salasana";
+
+/* No comment provided by engineer. */
+"Are you sure you want to delete this CGM?" = "Haluatko varmasti poistaa CGM:n?";
+
+/* Button text to Cancel in Nightscout Disclaimer view */
+"Cancel" = "Kumoa";
+
+/* No comment provided by engineer. */
+"CGM Settings" = "CGM-asetukset";
+
+/* (No Comment) */
+"Close" = "Sulje";
+
+/* Button text to Continue in Nightscout Disclaimer view */
+"Continue" = "Jatka";
+
+/* (No Comment) */
+"Delete CGM" = "Poista CGM";
+
+/* No comment provided by engineer. */
+"Done" = "Valmis";
+
+/* No comment provided by engineer. */
+"Status" = "Tila";
+
+/* The title of the Nightscout API server URL credential */
+"URL" = "URL";
+
