@@ -9,7 +9,6 @@
 import LoopKitUI
 import LoopKit
 import HealthKit
-import NightscoutAPIClient
 
 extension NightscoutRemoteCGM: CGMManagerUI {
     

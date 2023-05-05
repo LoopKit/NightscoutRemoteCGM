@@ -10,7 +10,7 @@ import os.log
 extension OSLog {
 
     convenience init(category: String) {
-        self.init(subsystem: "com.loopkit.NightscoutAPIClient", category: category)
+        self.init(subsystem: "com.loopkit.NightscoutRemoteCGM", category: category)
     }
 
     func debug(_ message: StaticString, _ args: CVarArg...) {

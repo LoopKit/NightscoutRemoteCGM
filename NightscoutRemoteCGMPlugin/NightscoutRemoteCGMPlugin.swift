@@ -8,11 +8,10 @@
 
 import os.log
 import LoopKitUI
-import NightscoutAPIClient
-import NightscoutAPIClientUI
+import NightscoutRemoteCGM
 
-class NightscoutAPIClientPlugin: NSObject, CGMManagerUIPlugin {
-    private let log = OSLog(category: "NightscoutAPIClientPlugin")
+class NightscoutRemoteCGMPlugin: NSObject, CGMManagerUIPlugin {
+    private let log = OSLog(category: "NightscoutRemoteCGMPlugin")
     
     public var cgmManagerType: CGMManagerUI.Type? {
         NightscoutRemoteCGM.self

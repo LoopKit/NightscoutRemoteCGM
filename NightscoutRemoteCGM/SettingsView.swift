@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Combine
-import NightscoutAPIClient
 
 private let frameworkBundle = Bundle(for: SettingsViewModel.self)
 

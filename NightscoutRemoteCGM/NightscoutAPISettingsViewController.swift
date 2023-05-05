@@ -10,7 +10,6 @@ import SwiftUI
 import HealthKit
 import LoopKit
 import LoopKitUI
-import NightscoutAPIClient
 import Combine
 
 public final class NightscoutAPISettingsViewController: UIHostingController<SettingsView>, CompletionNotifying {

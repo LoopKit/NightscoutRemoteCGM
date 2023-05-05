@@ -1,6 +1,6 @@
 //
 //  DispatchTimer.swift
-//  NightscoutAPIClient
+//  NightscoutRemoteCGM
 //
 //  Created by Ivan Valkou on 07.01.2020.
 //  Copyright © 2020 Ivan Valkou. All rights reserved.

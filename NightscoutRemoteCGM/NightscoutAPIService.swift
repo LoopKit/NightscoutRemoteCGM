@@ -11,7 +11,7 @@ import Combine
 
 public class NightscoutAPIService: ServiceAuthentication {
     
-    private(set) var client: NightscoutAPIClient?
+    private(set) var client: NightscoutFetcher?
     private var requestReceiver: Cancellable?
     
     public init(url: URL?, apiSecret: String?) {
@@ -19,7 +19,7 @@ public class NightscoutAPIService: ServiceAuthentication {
 
         if let url = url, let apiSecret = apiSecret {
             isAuthorized = true
-            client = NightscoutAPIClient(url: url, apiSecret: apiSecret)
+            client = NightscoutFetcher(url: url, apiSecret: apiSecret)
         }
     }
     
@@ -46,7 +46,7 @@ public class NightscoutAPIService: ServiceAuthentication {
 
         //Not using client property in case called by ServiceAuthentication framework
         //as it only gets set after first validation
-        let client = NightscoutAPIClient(url: url, apiSecret: apiSecret)
+        let client = NightscoutFetcher(url: url, apiSecret: apiSecret)
         requestReceiver?.cancel()
 
         client.fetchRecent() { result in

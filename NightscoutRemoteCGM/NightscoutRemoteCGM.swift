@@ -1,6 +1,6 @@
 //
 //  NightscoutAPIManager.swift
-//  NightscoutAPIClient
+//  NightscoutRemoteCGM
 //
 //  Created by Ivan Valkou on 10.10.2019.
 //  Copyright © 2019 Ivan Valkou. All rights reserved.
@@ -13,7 +13,7 @@ import NightscoutKit
 
 public class NightscoutRemoteCGM: CGMManager {
     
-    public static let managerIdentifier = "NightscoutAPIClient"
+    public static let managerIdentifier = "NightscoutRemoteCGM"
     
     public var managerIdentifier: String {
         return NightscoutRemoteCGM.managerIdentifier

@@ -11,7 +11,6 @@ import SwiftUI
 import HealthKit
 import LoopKit
 import LoopKitUI
-import NightscoutAPIClient
 import Combine
 
 final class NightscoutAPISetupViewController: UINavigationController, CompletionNotifying, CGMManagerOnboarding {

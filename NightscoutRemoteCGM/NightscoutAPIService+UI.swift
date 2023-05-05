@@ -7,7 +7,6 @@
 //
 
 import LoopKitUI
-import NightscoutAPIClient
 
 extension NightscoutAPIService: ServiceAuthenticationUI {
     public var credentialFormFields: [ServiceCredential] {

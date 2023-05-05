@@ -1,6 +1,6 @@
 //
 //  LocalizedString.swift
-//  NightscoutAPIClient
+//  NightscoutRemoteCGM
 //
 //  Created by Ivan Valkou on 10.10.2019.
 //  Copyright © 2019 Ivan Valkou. All rights reserved.
