@@ -11,7 +11,7 @@
 		38D9A64D2413C0D30099AAF0 /* KalmanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D9A6492413C0D30099AAF0 /* KalmanFilter.swift */; };
 		38D9A64E2413C0D30099AAF0 /* KalmanFilterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D9A64A2413C0D30099AAF0 /* KalmanFilterType.swift */; };
 		38D9A6502413C0D30099AAF0 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D9A64C2413C0D30099AAF0 /* DoubleExtension.swift */; };
-		38F613AA234F3067003FB95D /* NightscoutAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F6139C234F3066003FB95D /* NightscoutAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38F613AA234F3067003FB95D /* NightscoutRemoteCGM.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F6139C234F3066003FB95D /* NightscoutRemoteCGM.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38F613B7234F333C003FB95D /* LoopKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F613B6234F333C003FB95D /* LoopKit.framework */; platformFilter = ios; };
 		38F613B9234F33B1003FB95D /* NightscoutRemoteCGM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F613B8234F33B1003FB95D /* NightscoutRemoteCGM.swift */; };
 		38F613BE234F3E83003FB95D /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F613BD234F3E83003FB95D /* LocalizedString.swift */; };
@@ -91,7 +91,7 @@
 		38E30FCC2358C28900DAB3A0 /* LoopKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E30FD02358C29700DAB3A0 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		38F61399234F3066003FB95D /* NightscoutRemoteCGM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NightscoutRemoteCGM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		38F6139C234F3066003FB95D /* NightscoutAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightscoutAPIClient.h; sourceTree = "<group>"; };
+		38F6139C234F3066003FB95D /* NightscoutRemoteCGM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightscoutRemoteCGM.h; sourceTree = "<group>"; };
 		38F6139D234F3066003FB95D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38F613B6234F333C003FB95D /* LoopKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LoopKit.framework; path = Carthage/Build/iOS/LoopKit.framework; sourceTree = "<group>"; };
 		38F613B8234F33B1003FB95D /* NightscoutRemoteCGM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutRemoteCGM.swift; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				38D9A6482413C0870099AAF0 /* KalmanFilter */,
-				38F6139C234F3066003FB95D /* NightscoutAPIClient.h */,
+				38F6139C234F3066003FB95D /* NightscoutRemoteCGM.h */,
 				38F6139D234F3066003FB95D /* Info.plist */,
 				A901264E26D95DFB0081BAD1 /* Assets.xcassets */,
 				38F613B8234F33B1003FB95D /* NightscoutRemoteCGM.swift */,
@@ -249,7 +249,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38F613AA234F3067003FB95D /* NightscoutAPIClient.h in Headers */,
+				38F613AA234F3067003FB95D /* NightscoutRemoteCGM.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

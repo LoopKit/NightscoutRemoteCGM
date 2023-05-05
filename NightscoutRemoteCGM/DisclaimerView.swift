@@ -1,6 +1,6 @@
 //
 //  DisclaimerView.swift
-//  NightscoutAPIClientUI
+//  NightscoutRemoteCGM
 //
 //  Created by Bill Gestrich on 2/6/2022.
 //  Copyright © 2022 Bill Gestrich. All rights reserved.
