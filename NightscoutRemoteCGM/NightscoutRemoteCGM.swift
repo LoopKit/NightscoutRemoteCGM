@@ -6,9 +6,10 @@
 //  Copyright © 2019 Ivan Valkou. All rights reserved.
 //
 
-import LoopKit
-import HealthKit
 import Combine
+import HealthKit
+import LoopAlgorithm
+import LoopKit
 import NightscoutKit
 
 public class NightscoutRemoteCGM: CGMManager {
@@ -160,7 +161,7 @@ public class NightscoutRemoteCGM: CGMManager {
                         }
                         return NewGlucoseSample(
                             date: glucose.startDate,
-                            quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
+                            quantity: LoopQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
                             condition: nil,
                             trend: glucoseTrend,
                             trendRate: glucose.trendRate,
