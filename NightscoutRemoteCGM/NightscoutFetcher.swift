@@ -9,7 +9,6 @@
 import Foundation
 import NightscoutKit
 import LoopKit
-import HealthKit
 import LoopAlgorithm
 
 final class NightscoutFetcher {
