@@ -9,7 +9,6 @@
 import Foundation
 import NightscoutKit
 import LoopKit
-import HealthKit
 import LoopAlgorithm
 
 final class NightscoutFetcher {
@@ -41,7 +40,7 @@ final class NightscoutFetcher {
 
 extension GlucoseEntry: GlucoseValue {
     public var startDate: Date { date }
-    public var quantity: HKQuantity { .init(unit: .milligramsPerDeciliter, doubleValue: glucose) }
+    public var quantity: LoopQuantity { .init(unit: .milligramsPerDeciliter, doubleValue: glucose) }
 }
 
 extension GlucoseEntry: GlucoseDisplayable {
@@ -64,21 +63,11 @@ extension GlucoseEntry: GlucoseDisplayable {
         return nil
     }
     
-    public var trendRate: HKQuantity? {
+    public var trendRate: LoopQuantity? {
         if let changeRate = changeRate {
-            return HKQuantity(unit: .milligramsPerDeciliterPerMinute, doubleValue: changeRate)
+            return LoopQuantity(unit: .milligramsPerDeciliterPerMinute, doubleValue: changeRate)
         } else {
             return nil
         }
     }
-}
-
-extension HKUnit {
-    static let milligramsPerDeciliter: HKUnit = {
-        HKUnit.gramUnit(with: .milli).unitDivided(by: .literUnit(with: .deci))
-    }()
-
-    public static let milligramsPerDeciliterPerMinute: HKUnit = {
-        return HKUnit.milligramsPerDeciliter.unitDivided(by: .minute())
-    }()
 }
