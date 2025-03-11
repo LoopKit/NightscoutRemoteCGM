@@ -19,6 +19,7 @@
 		38F613C2234F7FB9003FB95D /* NightscoutFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F613C1234F7FB9003FB95D /* NightscoutFetcher.swift */; };
 		38FA78D32350C80600780D61 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA78D22350C80600780D61 /* TimeInterval.swift */; };
 		38FEB836236082B900F1E810 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FEB835236082B900F1E810 /* HealthKit.framework */; platformFilter = ios; };
+		3BFBDE992D80EAC200C04AF2 /* LoopKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BFBDE982D80EAC200C04AF2 /* LoopKitUI.framework */; };
 		A9BAC74426CDBBB4001C9493 /* NightscoutRemoteCGMPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74326CDBBB4001C9493 /* NightscoutRemoteCGMPlugin.swift */; };
 		A9BAC74626CDC3AA001C9493 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74526CDC3AA001C9493 /* Bundle.swift */; };
 		A9BAC74A26CDC565001C9493 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAC74726CDC3B3001C9493 /* OSLog.swift */; };
@@ -100,6 +101,7 @@
 		38F613C1234F7FB9003FB95D /* NightscoutFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightscoutFetcher.swift; sourceTree = "<group>"; };
 		38FA78D22350C80600780D61 /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		38FEB835236082B900F1E810 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		3BFBDE982D80EAC200C04AF2 /* LoopKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = LoopKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A901264E26D95DFB0081BAD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A96EF0D7279F75DE00434E5D /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
 		A97B829727D4C275001B3AC1 /* NightscoutUploadKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NightscoutUploadKit.framework; path = "../../../../../Library/Developer/Xcode/DerivedData/Loop-dfjysjerglduzpdnvmjmaqvgtyio/Build/Products/Debug-iphoneos/NightscoutUploadKit.framework"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BFBDE992D80EAC200C04AF2 /* LoopKitUI.framework in Frameworks */,
 				C1CEBFF729BCC2C8007FD8A3 /* NightscoutKit in Frameworks */,
 				38FEB836236082B900F1E810 /* HealthKit.framework in Frameworks */,
 				38F613B7234F333C003FB95D /* LoopKit.framework in Frameworks */,
@@ -201,6 +204,7 @@
 		38F613B5234F3315003FB95D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BFBDE982D80EAC200C04AF2 /* LoopKitUI.framework */,
 				A9BA338227E772B400AC6233 /* NightscoutUploadKit.framework */,
 				A97B829727D4C275001B3AC1 /* NightscoutUploadKit.framework */,
 				384D8F0D23608BEA00B1DD29 /* LoopKit.framework */,
