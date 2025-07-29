@@ -231,10 +231,8 @@ public class NightscoutRemoteCGM: CGMManager {
 }
 
 // MARK: - AlertResponder implementation
-extension NightscoutRemoteCGM {
-    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier, completion: @escaping (Error?) -> Void) {
-        completion(nil)
-    }
+extension NightscoutRemoteCGM {    
+    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier) async throws { }
 }
 
 // MARK: - AlertSoundVendor implementation
