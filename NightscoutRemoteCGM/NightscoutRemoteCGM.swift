@@ -13,6 +13,11 @@ import LoopKit
 import NightscoutKit
 
 public class NightscoutRemoteCGM: CGMManager {
+    public var inSignalLoss: Bool = false
+    
+    public var isInoperable: Bool {
+        cgmManagerStatus.isInoperable
+    }
     
     public let pluginIdentifier = "NightscoutRemoteCGM"
     
