@@ -6,14 +6,20 @@
 //  Copyright © 2019 Ivan Valkou. All rights reserved.
 //
 
-import LoopKit
-import HealthKit
 import Combine
+import HealthKit
+import LoopAlgorithm
+import LoopKit
 import NightscoutKit
 
 public class NightscoutRemoteCGM: CGMManager {
+    public var inSignalLoss: Bool = false
     
-    public static let pluginIdentifier = "NightscoutRemoteCGM"
+    public var isInoperable: Bool {
+        cgmManagerStatus.isInoperable
+    }
+    
+    public let pluginIdentifier = "NightscoutRemoteCGM"
     
     public static let localizedTitle = LocalizedString("Nightscout Remote CGM", comment: "Title for the CGMManager option")
     
@@ -160,7 +166,7 @@ public class NightscoutRemoteCGM: CGMManager {
                         }
                         return NewGlucoseSample(
                             date: glucose.startDate,
-                            quantity: HKQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
+                            quantity: LoopQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
                             condition: nil,
                             trend: glucoseTrend,
                             trendRate: glucose.trendRate,
@@ -230,10 +236,8 @@ public class NightscoutRemoteCGM: CGMManager {
 }
 
 // MARK: - AlertResponder implementation
-extension NightscoutRemoteCGM {
-    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier, completion: @escaping (Error?) -> Void) {
-        completion(nil)
-    }
+extension NightscoutRemoteCGM {    
+    public func acknowledgeAlert(alertIdentifier: Alert.AlertIdentifier) async throws { }
 }
 
 // MARK: - AlertSoundVendor implementation
