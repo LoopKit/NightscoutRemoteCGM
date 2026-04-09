@@ -824,7 +824,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Realizat"
+            "value" : "Gata"
           }
         },
         "ru" : {
@@ -1349,7 +1349,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Utilizați filtrul de glucoză"
+            "value" : "Utilizați filtrul de glicemie"
           }
         },
         "ru" : {
