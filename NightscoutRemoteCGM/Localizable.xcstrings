@@ -52,12 +52,6 @@
             "value" : "API Secret"
           }
         },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "एपीआई पास्वर्ड"
-          }
-        },
         "it" : {
           "stringUnit" : {
             "state" : "translated",
@@ -311,12 +305,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "לא"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "निरस्त"
           }
         },
         "it" : {
@@ -866,12 +854,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "CGM Nightscout à distance"
-          }
-        },
-        "hi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "नाइटस्काउट  रिमोट कंटीन्यूअस ग्लूकोज मॉनिटरिंग"
           }
         },
         "it" : {
