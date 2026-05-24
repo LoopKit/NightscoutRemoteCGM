@@ -161,7 +161,9 @@ public class NightscoutRemoteCGM: CGMManager {
                     let startDate = self.delegate.call { (delegate) -> Date? in
                         return delegate?.startDateToFilterNewData(for: self)
                     }
-                    let newGlucose = filteredGlucose.filterDateRange(startDate, nil)
+                    // filterDateRange uses a binary search that requires the array sorted
+                    // ascending by date. Nightscout returns entries newest-first, so sort first.
+                    let newGlucose = filteredGlucose.sorted { $0.startDate < $1.startDate }.filterDateRange(startDate, nil)
                     let newSamples = newGlucose.filter({ $0.isStateValid }).map { glucose -> NewGlucoseSample in
                         let glucoseTrend: LoopKit.GlucoseTrend?
                         if let trend = glucose.trend {
@@ -181,9 +183,10 @@ public class NightscoutRemoteCGM: CGMManager {
                             device: self.device)
                     }
 
-                    os_log("Fetched %{public}@ glucose entries; %{public}@ new sample(s)", log: self.log, type: .default, String(glucoseEntries.count), String(newSamples.count))
+                    let newestEntryDate = glucoseEntries.map { $0.startDate }.max()
+                    os_log("Fetched %{public}@ entries (newest %{public}@); Loop cutoff %{public}@; %{public}@ new sample(s)", log: self.log, type: .default, String(glucoseEntries.count), String(describing: newestEntryDate), String(describing: startDate), String(newSamples.count))
 
-                    if let latestBackfill = newGlucose.max(by: {$0.startDate > $1.startDate}) {
+                    if let latestBackfill = newGlucose.max(by: { $0.startDate < $1.startDate }) {
                         self.latestBackfill = latestBackfill
                     }
 
