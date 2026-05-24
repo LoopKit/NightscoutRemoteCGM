@@ -11,6 +11,7 @@ import HealthKit
 import LoopAlgorithm
 import LoopKit
 import NightscoutKit
+import os.log
 
 public class NightscoutRemoteCGM: CGMManager {
     public var inSignalLoss: Bool = false
@@ -97,6 +98,8 @@ public class NightscoutRemoteCGM: CGMManager {
 
     private let processQueue = DispatchQueue(label: "NightscoutRemoteCGM.processQueue")
 
+    private let log = OSLog(subsystem: "com.loopkit.NightscoutRemoteCGM", category: "NightscoutRemoteCGM")
+
     private var isFetching = false
 
     public func fetchNewDataIfNeeded(_ completion: @escaping (CGMReadingResult) -> Void) {
@@ -117,6 +120,7 @@ public class NightscoutRemoteCGM: CGMManager {
         processQueue.async {
             self.isFetching = true
 
+            os_log("Fetching recent glucose from Nightscout", log: self.log, type: .default)
             nightscoutClient.fetchRecent { fetchResult in
                 
                 self.isFetching = false
@@ -124,6 +128,7 @@ public class NightscoutRemoteCGM: CGMManager {
                 switch fetchResult {
                 case .success(let glucoseEntries):
                     guard !glucoseEntries.isEmpty else {
+                        os_log("Fetch succeeded but returned no glucose entries", log: self.log, type: .default)
                         self.delegateQueue.async {
                             completion(.noData)
                         }
@@ -176,6 +181,8 @@ public class NightscoutRemoteCGM: CGMManager {
                             device: self.device)
                     }
 
+                    os_log("Fetched %{public}@ glucose entries; %{public}@ new sample(s)", log: self.log, type: .default, String(glucoseEntries.count), String(newSamples.count))
+
                     if let latestBackfill = newGlucose.max(by: {$0.startDate > $1.startDate}) {
                         self.latestBackfill = latestBackfill
                     }
@@ -188,6 +195,7 @@ public class NightscoutRemoteCGM: CGMManager {
                         completion(.newData(newSamples))
                     }
                 case let .failure(error):
+                    os_log("Fetch failed: %{public}@", log: self.log, type: .error, String(describing: error))
                     self.delegateQueue.async {
                         completion(.error(error))
                     }
