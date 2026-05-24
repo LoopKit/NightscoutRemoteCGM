@@ -17,14 +17,14 @@ extension NightscoutAPIService: ServiceAuthenticationUI {
                 keyboardType: .URL
             ),
             ServiceCredential(
-                title: LocalizedString("API Secret", comment: "The title of the Nightscout API secret credential"),
+                title: LocalizedString("API Secret (optional)", comment: "The title of the Nightscout API secret credential"),
                 isSecret: true,
                 keyboardType: .default
             )
         ]
     }
-    
+
     public var credentialFormFieldHelperMessage: String? {
-        return nil
+        return LocalizedString("An API Secret is only needed for Nightscout sites that require authentication to read. Leave it blank for sites that are open for reading.", comment: "Helper message explaining that the Nightscout API secret is optional for sites open for reading")
     }
 }

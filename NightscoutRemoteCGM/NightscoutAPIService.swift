@@ -17,9 +17,11 @@ public class NightscoutAPIService: ServiceAuthentication {
     public init(url: URL?, apiSecret: String?) {
         credentialValues = [url?.absoluteString, apiSecret]
 
-        if let url = url, let apiSecret = apiSecret {
+        // An API secret is only needed for sites that require authentication to read.
+        // A URL alone is enough to read from a Nightscout site that is open for reading.
+        if let url = url {
             isAuthorized = true
-            client = NightscoutFetcher(url: url, apiSecret: apiSecret)
+            client = NightscoutFetcher(url: url, apiSecret: apiSecret ?? "")
         }
     }
     
@@ -39,14 +41,14 @@ public class NightscoutAPIService: ServiceAuthentication {
     
     public func checkServiceStatus(_ completion: @escaping (Result<Void, NightScoutAPIServiceError>) -> Void) {
         
-        guard let url = url, let apiSecret = apiSecret else {
+        guard let url = url else {
             completion(.failure(.missingURL))
             return
         }
 
         //Not using client property in case called by ServiceAuthentication framework
         //as it only gets set after first validation
-        let client = NightscoutFetcher(url: url, apiSecret: apiSecret)
+        let client = NightscoutFetcher(url: url, apiSecret: apiSecret ?? "")
         requestReceiver?.cancel()
 
         client.fetchRecent() { result in
@@ -117,8 +119,8 @@ extension KeychainManager {
         do {
             let credentials: InternetCredentials?
 
-            if let url = url, let apiSecret = apiSecret {
-                credentials = InternetCredentials(username: Config.nightscoutCgmLabel, password: apiSecret, url: url)
+            if let url = url {
+                credentials = InternetCredentials(username: Config.nightscoutCgmLabel, password: apiSecret ?? "", url: url)
             } else {
                 credentials = nil
             }
