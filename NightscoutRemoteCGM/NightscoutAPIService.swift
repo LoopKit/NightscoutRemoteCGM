@@ -8,9 +8,11 @@
 
 import LoopKit
 import Combine
+import os.log
 
 public class NightscoutAPIService: ServiceAuthentication {
-    
+
+    private let log = OSLog(subsystem: "com.loopkit.NightscoutRemoteCGM", category: "NightscoutAPIService")
     private(set) var client: NightscoutFetcher?
     private var requestReceiver: Cancellable?
     
@@ -41,10 +43,15 @@ public class NightscoutAPIService: ServiceAuthentication {
     
     public func checkServiceStatus(_ completion: @escaping (Result<Void, NightScoutAPIServiceError>) -> Void) {
         
+        let log = self.log
+
         guard let url = url else {
+            os_log("Verification failed: no URL configured", log: log, type: .error)
             completion(.failure(.missingURL))
             return
         }
+
+        os_log("Verifying Nightscout CGM at %{public}@ (API Secret: %{public}@)", log: log, type: .default, url.absoluteString, (apiSecret?.isEmpty == false) ? "provided" : "none")
 
         //Not using client property in case called by ServiceAuthentication framework
         //as it only gets set after first validation
@@ -55,11 +62,14 @@ public class NightscoutAPIService: ServiceAuthentication {
             switch result {
             case .success(let entries):
                 if entries.isEmpty {
+                    os_log("Verification failed: connected, but no recent glucose values were returned", log: log, type: .error)
                     completion(.failure(NightScoutAPIServiceError.emptyGlucose))
                 } else {
+                    os_log("Verification succeeded: %{public}@ recent glucose entries", log: log, type: .default, String(entries.count))
                     completion(.success(()))
                 }
             case let .failure(error):
+                os_log("Verification failed: %{public}@", log: log, type: .error, String(describing: error))
                 completion(.failure(.apiError(error)))
             }
         }
