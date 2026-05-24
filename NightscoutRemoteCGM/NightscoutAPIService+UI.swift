@@ -17,7 +17,8 @@ extension NightscoutAPIService: ServiceAuthenticationUI {
                 keyboardType: .URL
             ),
             ServiceCredential(
-                title: LocalizedString("API Secret (optional)", comment: "The title of the Nightscout API secret credential"),
+                title: LocalizedString("API Secret", comment: "The title of the Nightscout API secret credential"),
+                placeholder: LocalizedString("Optional", comment: "Placeholder indicating the Nightscout API secret is optional"),
                 isSecret: true,
                 keyboardType: .default
             )
