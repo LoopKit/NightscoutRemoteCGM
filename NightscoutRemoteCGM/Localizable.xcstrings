@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "An API Secret is only needed for Nightscout sites that require authentication to read. Leave it blank for sites that are open for reading." : {
+      "comment" : "Helper message explaining that the Nightscout API secret is optional for sites open for reading"
+    },
     "API Secret" : {
       "comment" : "The title of the Nightscout API secret credential",
       "localizations" : {
@@ -923,6 +926,9 @@
           }
         }
       }
+    },
+    "Optional" : {
+      "comment" : "Placeholder indicating the Nightscout API secret is optional"
     },
     "Select Upload option if you are using a source other than a remote service." : {
       "extractionState" : "manual",
