@@ -215,7 +215,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sunteți sigur că doriți să ștergeți acest CGM?"
+            "value" : "Sunteți sigur că doriți să ștergeți acest senzor de glicemie?"
           }
         },
         "ru" : {
@@ -452,7 +452,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Setări CGM"
+            "value" : "Setări senzor de glicemie"
           }
         },
         "ru" : {
@@ -572,6 +572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kapat"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
           }
         }
       }
@@ -724,7 +730,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ștergeți CGM"
+            "value" : "Ștergeți senzorul de glicemie"
           }
         },
         "ru" : {
@@ -820,6 +826,12 @@
             "state" : "translated",
             "value" : "Готово"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
         }
       }
     },
@@ -883,7 +895,7 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nightscout CGM de la distanță"
+            "value" : "Senzor de glicemie de la distanță via Nighscout"
           }
         },
         "ru" : {
@@ -902,6 +914,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nightscout Uzak CGM"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nightscout Remote CGM"
           }
         }
       }
@@ -962,6 +980,12 @@
             "state" : "translated",
             "value" : "Выберите параметр «Загрузить», если вы используете источник, отличный от удаленной службы."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果您使用的来源不是远程服务，请选择\"上传\"选项。"
+          }
         }
       }
     },
@@ -1012,13 +1036,19 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Sursa CGM Nightscout Remote va utiliza datele CGM de la Nightscout și le va face disponibile în Loop. Acest lucru este util dacă nu puteți adăuga dispozitivul CGM la Loop, însă datele CGM sunt disponibile în Nightscout. \n \nNu se recomandă utilizarea acestei funcții pentru terapie din cauza riscului de întreruperi ale rețelei și a lipsei de suport pentru execuția aplicației în fundal."
+            "value" : "Sursa Nightscout de la distanță a senzorului de glicemie va utiliza datele senzorului de glicemie din Nightscout și le va face disponibile în Loop. Acest lucru este util dacă nu puteți adăuga senzorul de glicemie în Loop, însă datele senzorului de glicemie sunt disponibile în Nightscout. \n \nNu se recomandă utilizarea acestei funcții pentru terapie din cauza riscului de întreruperi ale rețelei și a lipsei de suport pentru execuția aplicației în fundal."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Источник Nightscout Remote CGM будет использовать ваши данные CGM из Nightscout и сделает их доступными в Loop. Это полезно, если вы не можете добавить ваше CGM-устройство в Loop, но ваши CGM-данные доступны в Nightscout.\n\nНе рекомендуется использовать его для терапии из-за риска перебоев в сети и отсутствия фоновой поддержки приложения."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nightscout Remote CGM 数据源会从 Nightscout 获取你的 CGM 血糖数据，并提供给 Loop 使用。如果你无法将 CGM 设备直接接入 Loop，但血糖数据已经同步到 Nightscout，该功能就很有用。\n\n**不建议将此模式用于实际治疗**，存在网络中断风险，同时缺少 App 后台运行支持。"
           }
         }
       }
@@ -1215,6 +1245,12 @@
             "state" : "translated",
             "value" : "Загружать в удаленный сервис (Nightscout)"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "上传至远程服务"
+          }
         }
       }
     },
@@ -1266,13 +1302,19 @@
         "ro" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "URL"
+            "value" : "Adresă"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "URL"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "URL 地址"
           }
         }
       }
@@ -1339,6 +1381,12 @@
             "state" : "translated",
             "value" : "Использовать фильтр глюкозы"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用血糖过滤"
+          }
         }
       }
     },
@@ -1403,6 +1451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Использовать фильтр Калмана, чтобы сгладить шумы сенсора."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用卡尔曼滤波器平滑传感器噪声。"
           }
         }
       }
