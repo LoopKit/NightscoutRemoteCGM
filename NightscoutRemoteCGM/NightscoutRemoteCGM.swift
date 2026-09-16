@@ -163,7 +163,12 @@ public class NightscoutRemoteCGM: CGMManager {
                     }
                     // filterDateRange uses a binary search that requires the array sorted
                     // ascending by date. Nightscout returns entries newest-first, so sort first.
-                    let newGlucose = filteredGlucose.sorted { $0.startDate < $1.startDate }.filterDateRange(startDate, nil)
+                    // filterDateRange is inclusive at its lower bound, and startDate is the newest
+                    // reading Loop already holds, so that reading would come back as "new" on every
+                    // poll. Only readings strictly after it are new.
+                    let newGlucose = filteredGlucose.sorted { $0.startDate < $1.startDate }
+                        .filterDateRange(startDate, nil)
+                        .filter { startDate == nil || $0.startDate > startDate! }
                     let newSamples = newGlucose.filter({ $0.isStateValid }).map { glucose -> NewGlucoseSample in
                         let glucoseTrend: LoopKit.GlucoseTrend?
                         if let trend = glucose.trend {
