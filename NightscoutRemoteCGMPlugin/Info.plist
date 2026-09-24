@@ -24,5 +24,7 @@
 	<string>Nightscout Remote CGM</string>
 	<key>com.loopkit.Loop.CGMManagerIdentifier</key>
 	<string>NightscoutRemoteCGM</string>
+	<key>com.loopkit.Loop.DeviceManufacturer</key>
+	<string>Remote</string>
 </dict>
 </plist>
