@@ -73,7 +73,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "API Secret"
+            "value" : "API geheime sleutel"
           }
         },
         "pl" : {
@@ -618,7 +618,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ga Verder"
+            "value" : "Ga verder"
           }
         },
         "pl" : {
@@ -806,7 +806,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gereed"
+            "value" : "Voltooid"
           }
         },
         "pl" : {
@@ -963,6 +963,12 @@
             "value" : "Velg alternativet Last opp hvis du bruker en annen kilde enn en ekstern tjeneste."
           }
         },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies Uploaden als je een andere bron dan een externe dienst gebruikt."
+          }
+        },
         "pl" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1025,6 +1031,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nightscout Remote CGM-kilden bruker CGM-dataene dine fra Nightscout og gjør dem tilgjengelige i Loop. Dette er nyttig hvis du ikke kan legge til CGM-enheten din i Loop, men CGM-dataene dine er tilgjengelige på Nightscout.\n\nDet anbefales ikke å bruke dette til behandling på grunn av risikoen for nettverksavbrudd og mangelen på appbakgrunnsstøtte."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De bron Nightscout Remote CGM haalt je CGM-gegevens uit Nightscout en maakt ze beschikbaar in Loop. Dit is handig als je je CGM niet aan Loop kunt toevoegen, maar je CGM-gegevens wel in Nightscout staan.\n\nGebruik dit liever niet voor je behandeling, omdat het netwerk kan uitvallen en de app niet goed op de achtergrond werkt."
           }
         },
         "pl" : {
@@ -1432,7 +1444,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Gebruik het Kalman filter om sensorruis af te vlakken."
+            "value" : "Gebruik het Kalmanfilter om sensorruis af te vlakken."
           }
         },
         "pl" : {
