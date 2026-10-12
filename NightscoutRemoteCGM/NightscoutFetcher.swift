@@ -38,12 +38,12 @@ final class NightscoutFetcher {
     }
 }
 
-extension GlucoseEntry: GlucoseValue {
+extension GlucoseEntry: @retroactive GlucoseValue {
     public var startDate: Date { date }
     public var quantity: LoopQuantity { .init(unit: .milligramsPerDeciliter, doubleValue: glucose) }
 }
 
-extension GlucoseEntry: GlucoseDisplayable {
+extension GlucoseEntry: @retroactive GlucoseDisplayable {
 
     public var isStateValid: Bool {
         glucoseType == .meter || glucose >= 39
