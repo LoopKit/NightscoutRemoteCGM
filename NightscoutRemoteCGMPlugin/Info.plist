@@ -26,5 +26,7 @@
 	<string>NightscoutRemoteCGM</string>
 	<key>com.loopkit.Loop.DeviceManufacturer</key>
 	<string>Remote</string>
+	<key>com.loopkit.Loop.PluginSubtitle</key>
+	<string>Readings from your Nightscout site</string>
 </dict>
 </plist>
