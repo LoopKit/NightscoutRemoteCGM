@@ -335,7 +335,6 @@
 				ro,
 				sk,
 				da,
-				hi,
 				cs,
 				ar,
 				fi,
@@ -345,9 +344,9 @@
 				sv,
 				vi,
 				"zh-Hans",
-				ce,
 				hu,
 				uk,
+				ko,
 			);
 			mainGroup = 38F6138F234F3066003FB95D;
 			packageReferences = (
