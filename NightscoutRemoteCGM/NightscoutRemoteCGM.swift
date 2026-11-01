@@ -8,7 +8,6 @@
 
 import Combine
 import HealthKit
-import LoopAlgorithm
 import LoopKit
 import NightscoutKit
 import os.log

@@ -9,7 +9,6 @@
 import Foundation
 import NightscoutKit
 import LoopKit
-import LoopAlgorithm
 
 final class NightscoutFetcher {
     let url: URL
