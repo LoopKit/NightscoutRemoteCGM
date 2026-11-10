@@ -73,11 +73,6 @@ public class NightscoutRemoteCGM: CGMManager {
 
     public let delegate = WeakSynchronizedDelegate<CGMManagerDelegate>()
 
-    public var delegateQueue: DispatchQueue! {
-        get { delegate.queue }
-        set { delegate.queue = newValue }
-    }
-
     public var cgmManagerDelegate: CGMManagerDelegate? {
         get { delegate.delegate }
         set { delegate.delegate = newValue }
@@ -103,16 +98,12 @@ public class NightscoutRemoteCGM: CGMManager {
 
     public func fetchNewDataIfNeeded(_ completion: @escaping (CGMReadingResult) -> Void) {
         guard let nightscoutClient = nightscoutService.client, !isFetching else {
-            delegateQueue.async {
-                completion(.noData)
-            }
+            completion(.noData)
             return
         }
 
         if let latestGlucose = latestBackfill, latestGlucose.startDate.timeIntervalSinceNow > -TimeInterval(minutes: 4.5) {
-            delegateQueue.async {
-                completion(.noData)
-            }
+            completion(.noData)
             return
         }
 
@@ -128,9 +119,7 @@ public class NightscoutRemoteCGM: CGMManager {
                 case .success(let glucoseEntries):
                     guard !glucoseEntries.isEmpty else {
                         os_log("Fetch succeeded but returned no glucose entries", log: self.log, type: .default)
-                        self.delegateQueue.async {
-                            completion(.noData)
-                        }
+                        completion(.noData)
                         return
                     }
 
@@ -157,44 +146,44 @@ public class NightscoutRemoteCGM: CGMManager {
                         filteredGlucose = filteredGlucose.reversed()
                     }
 
-                    let startDate = self.delegate.call { (delegate) -> Date? in
-                        return delegate?.startDateToFilterNewData(for: self)
-                    }
-                    // filterDateRange uses a binary search that requires the array sorted
-                    // ascending by date. Nightscout returns entries newest-first, so sort first.
-                    // filterDateRange is inclusive at its lower bound, and startDate is the newest
-                    // reading Loop already holds, so that reading would come back as "new" on every
-                    // poll. Only readings strictly after it are new.
-                    let newGlucose = filteredGlucose.sorted { $0.startDate < $1.startDate }
-                        .filterDateRange(startDate, nil)
-                        .filter { startDate == nil || $0.startDate > startDate! }
-                    let newSamples = newGlucose.filter({ $0.isStateValid }).map { glucose -> NewGlucoseSample in
-                        let glucoseTrend: LoopKit.GlucoseTrend?
-                        if let trend = glucose.trend {
-                            glucoseTrend = LoopKit.GlucoseTrend(rawValue: trend.rawValue)
-                        } else {
-                            glucoseTrend = nil
+                    Task {
+                        let startDate = await self.delegate.call { (delegate) -> Date? in
+                            return await delegate?.startDateToFilterNewData(for: self)
                         }
-                        return NewGlucoseSample(
-                            date: glucose.startDate,
-                            quantity: LoopQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
-                            condition: nil,
-                            trend: glucoseTrend,
-                            trendRate: glucose.trendRate,
-                            isDisplayOnly: glucose.isCalibration == true,
-                            wasUserEntered: glucose.glucoseType == .meter,
-                            syncIdentifier: glucose.id ?? "\(Int(glucose.startDate.timeIntervalSince1970))",
-                            device: self.device)
-                    }
+                        // filterDateRange uses a binary search that requires the array sorted
+                        // ascending by date. Nightscout returns entries newest-first, so sort first.
+                        // filterDateRange is inclusive at its lower bound, and startDate is the newest
+                        // reading Loop already holds, so that reading would come back as "new" on every
+                        // poll. Only readings strictly after it are new.
+                        let newGlucose = filteredGlucose.sorted { $0.startDate < $1.startDate }
+                            .filterDateRange(startDate, nil)
+                            .filter { startDate == nil || $0.startDate > startDate! }
+                        let newSamples = newGlucose.filter({ $0.isStateValid }).map { glucose -> NewGlucoseSample in
+                            let glucoseTrend: LoopKit.GlucoseTrend?
+                            if let trend = glucose.trend {
+                                glucoseTrend = LoopKit.GlucoseTrend(rawValue: trend.rawValue)
+                            } else {
+                                glucoseTrend = nil
+                            }
+                            return NewGlucoseSample(
+                                date: glucose.startDate,
+                                quantity: LoopQuantity(unit: .milligramsPerDeciliter, doubleValue: glucose.glucose),
+                                condition: nil,
+                                trend: glucoseTrend,
+                                trendRate: glucose.trendRate,
+                                isDisplayOnly: glucose.isCalibration == true,
+                                wasUserEntered: glucose.glucoseType == .meter,
+                                syncIdentifier: glucose.id ?? "\(Int(glucose.startDate.timeIntervalSince1970))",
+                                device: self.device)
+                        }
 
-                    let newestEntryDate = glucoseEntries.map { $0.startDate }.max()
-                    os_log("Fetched %{public}@ entries (newest %{public}@); Loop cutoff %{public}@; %{public}@ new sample(s)", log: self.log, type: .default, String(glucoseEntries.count), String(describing: newestEntryDate), String(describing: startDate), String(newSamples.count))
+                        let newestEntryDate = glucoseEntries.map { $0.startDate }.max()
+                        os_log("Fetched %{public}@ entries (newest %{public}@); Loop cutoff %{public}@; %{public}@ new sample(s)", log: self.log, type: .default, String(glucoseEntries.count), String(describing: newestEntryDate), String(describing: startDate), String(newSamples.count))
 
-                    if let latestBackfill = newGlucose.max(by: { $0.startDate < $1.startDate }) {
-                        self.latestBackfill = latestBackfill
-                    }
+                        if let latestBackfill = newGlucose.max(by: { $0.startDate < $1.startDate }) {
+                            self.latestBackfill = latestBackfill
+                        }
 
-                    self.delegateQueue.async {
                         guard !newSamples.isEmpty else {
                             completion(.noData)
                             return
@@ -203,9 +192,7 @@ public class NightscoutRemoteCGM: CGMManager {
                     }
                 case let .failure(error):
                     os_log("Fetch failed: %{public}@", log: self.log, type: .error, String(describing: error))
-                    self.delegateQueue.async {
-                        completion(.error(error))
-                    }
+                    completion(.error(error))
                 }
 
 
@@ -242,7 +229,7 @@ public class NightscoutRemoteCGM: CGMManager {
             self.fetchNewDataIfNeeded { result in
                 guard case .newData = result else { return }
                 self.delegate.notify { delegate in
-                    delegate?.cgmManager(self, hasNew: result)
+                    await delegate?.cgmManager(self, hasNew: result)
                 }
             }
         }
